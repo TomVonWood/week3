@@ -14,7 +14,9 @@ def ingest_data(dataset_url):
 def transform_data(df):
     df['lpep_pickup_datetime']  = pd.to_datetime(df['lpep_pickup_datetime'])
     df['lpep_dropoff_datetime'] = pd.to_datetime(df['lpep_dropoff_datetime'])
-
+    print(df.head(2))
+    print(f"columns: {df.dtypes}")
+    print(f"rows: {len(df)}")
     return df
 
 @task()
