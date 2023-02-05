@@ -19,7 +19,7 @@ def transform_data(df):
 
 @task()
 def export_data_local(df, color, dataset_file):
-    path = Path(f"tomzoomcamp/homeworkzoomcamp/week3/data/{color}/{dataset_file}.parquet")
+    path = Path(f"/home/tomzoomcamp/homeworkzoomcamp/week3/data/{color}/{dataset_file}.parquet")
     df.to_parquet(path, compression="gzip")
     return path
 
